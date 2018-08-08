@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    hangouts-chat sends a message from Jenkins to a configurable room in Google Hangouts Chat.
+</div>
