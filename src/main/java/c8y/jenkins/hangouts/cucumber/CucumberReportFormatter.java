@@ -20,7 +20,7 @@ public class CucumberReportFormatter extends BuildFileFormatter {
 	protected void format(String buildUrl, ParsedProps failure, StringBuffer report) {
 		appendScenario(buildUrl + CUCUMBERURL, failure.get(ID), failure.get(FEATURE), failure.get(SCENARIO),
 				report);
-		report.append("\n  ");
+		report.append("\n");
 		report.append(failure.get(ERROR_MESSAGE).split("\n")[0]);
 	}
 	

@@ -25,20 +25,20 @@ public class RunReporter {
 
 	public String report(Set<com.google.api.services.chat.v1.model.User> members) {
 		StringBuffer buffer = new StringBuffer();
-		buffer.append("I am afraid the build of ");
+		buffer.append("I am afraid the build of *");
 		buffer.append(getJob());
-		buffer.append(" broke.\n");
+		buffer.append("* broke. ");
 
 		Set<String> culprits = getCulprits(members);
 		if (culprits.size() > 0) {
-			buffer.append("Would these ladies and gentlemen please check it:\n");
+			buffer.append("Would these ladies and gentlemen please take action: ");
 
 			for (String culprit : culprits) {
 				buffer.append(culprit);
 				buffer.append(" ");
 			}
-			buffer.append("\n");
 		}
+		buffer.append("\n");
 
 		// We need to probably do a better job in telling the people how many items there are and if the log was truncated.
 		String logSummary = truncate(getLogSummary(), MAX_LOG_ENTRIES);

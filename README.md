@@ -1,7 +1,7 @@
 
 # Overview
 
-This is a Jenkins plugin to connect Jenkins to Google Hangouts Chat rooms. It can be used in traditional Jenkins builds as well as in Jenkins Pipelines to report a summary of a broken build into a chat.
+This is a Jenkins plugin to connect Jenkins to Google Hangouts Chat rooms. It can be used in traditional Jenkins build jobs as well as in Jenkins Pipelines to report a summary of a broken build into a chat. The summary is build JUnit, Cucumber and Maven reports including mentioning the "culprits" if available and part of the chat room.
 
 # Setup (Google side)
 
