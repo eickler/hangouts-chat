@@ -8,6 +8,8 @@ import javax.servlet.ServletException;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.google.api.services.chat.v1.model.User;
 
@@ -23,11 +25,15 @@ import hudson.tasks.Notifier;
 import hudson.tasks.Publisher;
 import hudson.util.FormValidation;
 
+@Component
 public class HangoutsBuilder extends Notifier {
 
 	public static final int MAX_ENTRIES = 10;
 
 	private final String room;
+
+	@Autowired
+	private HangoutsRoom hangoutsRoom;
 
 	@DataBoundConstructor
 	public HangoutsBuilder(String room) {
@@ -48,22 +54,21 @@ public class HangoutsBuilder extends Notifier {
 		return true;
 	}
 
-	private void sendBrokenBuildMessage(AbstractBuild<?, ?> build) throws IOException {		
-		HangoutsSpace space = new HangoutsSpace(room);
-		Set<User> members = space.getMembers();
+	private void sendBrokenBuildMessage(AbstractBuild<?, ?> build) throws IOException {
+		hangoutsRoom.setRoom(room);
+		Set<User> members = hangoutsRoom.getMembers();
 
 		RunReporter reporter = new RunReporter(build);
 		String report = reporter.report(members);
 
 		if (report != null && report.length() > 0) {
-			space.send(report);
+			hangoutsRoom.send(report);
 		}
-	}	
+	}
 
 	@Symbol("chat")
 	@Extension
 	public static final class DescriptorImpl extends BuildStepDescriptor<Publisher> {
-
 		public FormValidation doCheckRoom(@QueryParameter String value) throws IOException, ServletException {
 			if (value.length() == 0)
 				return FormValidation.error(Messages.HangoutsBuilder_DescriptorImpl_errors_missingRoom());
@@ -81,7 +86,6 @@ public class HangoutsBuilder extends Notifier {
 		public String getDisplayName() {
 			return Messages.HangoutsBuilder_DescriptorImpl_DisplayName();
 		}
-
 	}
 
 	@Override

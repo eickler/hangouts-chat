@@ -1,132 +1,132 @@
 <http://localhost/cucumberTestReport/administration-home-screen/should-display-quick-links|Administration home screen: Should display quick links>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("quickLink in vm.quickLinks")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("quickLink in vm.quickLinks")
 <http://localhost/cucumberTestReport/clone-and-than-edit,-remove-applications/edit-newly-cloned-application-which-was-uploaded|Clone and than edit, remove applications: Edit newly cloned application which was uploaded>
-  AssertionError: JavaSript Error. Browser Console Log: [ Entry {
+AssertionError: JavaSript Error. Browser Console Log: [ Entry {
 <http://localhost/cucumberTestReport/enterprise-edition-branding-tests/branding-preview-functaionality|Enterprise edition branding tests: Branding preview functaionality>
-  TimeoutError: Wait timed out after 5018ms
+TimeoutError: Wait timed out after 5018ms
 <http://localhost/cucumberTestReport/enterprise-edition-branding-tests/branding-preview-functaionality|Enterprise edition branding tests: Branding preview functaionality>
-  WebDriverError: unknown error: Element <i c8y-icon="ellipsis-v" class="fa fw fa-ellipsis-v"></i> is not clickable at point (771, 164). Other element would receive the click: <div class="modal-dialog ">...</div>
+WebDriverError: unknown error: Element <i c8y-icon="ellipsis-v" class="fa fw fa-ellipsis-v"></i> is not clickable at point (771, 164). Other element would receive the click: <div class="modal-dialog ">...</div>
 <http://localhost/cucumberTestReport/jasper-connectivity-settings/should-display-error-alert-for-wrong-credentials|Jasper Connectivity Settings: Should display error alert for wrong credentials>
-  NoSuchElementError: No element found using locator: by.model("connectivitySettings.url")
+NoSuchElementError: No element found using locator: by.model("connectivitySettings.url")
 <http://localhost/cucumberTestReport/extend-tenant-properties/add-a-new-valid-string-property-in-tenant-tab|Extend tenant properties: Add a new valid string property in tenant tab>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator By(css selector, .form-group)
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator By(css selector, .form-group)
 <http://localhost/cucumberTestReport/tenants-and-subtenants-tests/suspended-tenant-editing-doesn't-re-activate-it|Tenants and subtenants tests: Suspended tenant editing doesn't re-activate it>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("tenant in tenants")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("tenant in tenants")
 <http://localhost/cucumberTestReport/tenants-usage-statistics/checking-integer-property-correctness-in-tenant-usage-statistics-report|Tenants usage statistics: Checking integer property correctness in tenant usage statistics report>
-  TimeoutError: Wait timed out after 10000ms
+TimeoutError: Wait timed out after 10000ms
 <http://localhost/cucumberTestReport/tenants-usage-statistics/tenant-statistics-download-with-custom-properties|Tenants usage statistics: Tenant statistics download with custom properties>
-  TimeoutError: Wait timed out after 10000ms
+TimeoutError: Wait timed out after 10000ms
 <http://localhost/cucumberTestReport/save-data-points-in-reports/store-data-points-in-csv-file|Save data points in reports: Store data points in csv file>
-  Error: Invalid filename
+Error: Invalid filename
 <http://localhost/cucumberTestReport/data-point-library-tests/change-display-as-between-list-and-grid-view|Data point library tests: Change display as between List and Grid view>
-  NoSuchElementError: No element found using locator: by.cssContainingText("option", "Grid")
+NoSuchElementError: No element found using locator: by.cssContainingText("option", "Grid")
 <http://localhost/cucumberTestReport/geofence-tests/trigger-on-leaving-alarm|Geofence tests: Trigger on leaving alarm>
-  AssertionError: Incorrect alarms' amount.: expected 2 to equal 1
+AssertionError: Incorrect alarms' amount.: expected 2 to equal 1
 <http://localhost/cucumberTestReport/on-measurement-explicit-threshold-create-alarm-smart-rule/on-measurement-explicit-threshold-create-alarm---realtime-is-disabled|On measurement explicit threshold create alarm smart rule: On measurement explicit threshold create alarm - realtime is disabled>
-  AssertionError: Incorrect alarms' amount.: expected 2 to equal 1
+AssertionError: Incorrect alarms' amount.: expected 2 to equal 1
 <http://localhost/cucumberTestReport/on-measurement-threshold-create-alarm-smart-rule/on-measurement-threshold-create-alarm---realtime-is-enabled|On measurement threshold create alarm smart rule: On measurement threshold create alarm - realtime is enabled>
-  AssertionError: Incorrect alarms' amount.: expected 2 to equal 1
+AssertionError: Incorrect alarms' amount.: expected 2 to equal 1
 <http://localhost/cucumberTestReport/fieldbus-widget/create-and-remove-fieldbus-widget-with-opcua-device|Fieldbus widget: Create and remove fieldbus widget with opcua device>
-  Error: function timed out after 125000 milliseconds
+Error: function timed out after 125000 milliseconds
 <http://localhost/cucumberTestReport/help-and-service-widget/create-and-remove-a-help-and-service-widget|Help and service widget: Create and remove a help and service widget>
-  AssertionError: JavaSript Error. Browser Console Log: [ Entry {
+AssertionError: JavaSript Error. Browser Console Log: [ Entry {
 <http://localhost/cucumberTestReport/fieldbus-device-database-entries/modbus-complete-example|Fieldbus device database entries: Modbus complete example>
-  NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
+NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
 <http://localhost/cucumberTestReport/fieldbus-device-database-entries/edit-modbus-register|Fieldbus device database entries: Edit modbus register>
-  NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
+NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
 <http://localhost/cucumberTestReport/profibus-device/add-profibus-device|Profibus device: Add Profibus device>
-  NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
+NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
 <http://localhost/cucumberTestReport/profibus-device/property-value-can-be-set-on-widget-for-profibus-device|Profibus device: Property value can be set on widget for Profibus device>
-  NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
+NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
 <http://localhost/cucumberTestReport/device-list-filtering/filter-devices-by-group|Device list filtering: Filter devices by group>
-  NoSuchElementError: No element found using locator: by.model("_scope.group")
+NoSuchElementError: No element found using locator: by.model("_scope.group")
 <http://localhost/cucumberTestReport/device-maintenance-tests/should-not-display-an-alarm-when-in-maintenance|Device maintenance tests: Should not display an alarm when in maintenance>
-  AssertionError: Incorrect alarms' amount.: expected 1 to equal 0
+AssertionError: Incorrect alarms' amount.: expected 1 to equal 0
 <http://localhost/cucumberTestReport/impact-device-protocol-feature/add-and-remove-a-impact-protocol|Impact device protocol feature: Add and Remove a IMPACT protocol>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("protocol in vm.protocols")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("protocol in vm.protocols")
 <http://localhost/cucumberTestReport/device-registration-feature/register-device-and-add-to-a-group|Device registration feature: Register device and add to a group>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("d in vm.newDeviceRequests")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("d in vm.newDeviceRequests")
 <http://localhost/cucumberTestReport/device-registration-feature/cancel-multiple-devices-registrations-in-state-waiting_for_connection|Device registration feature: Cancel multiple devices registrations in state WAITING_FOR_CONNECTION>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("d in vm.newDeviceRequests")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("d in vm.newDeviceRequests")
 <http://localhost/cucumberTestReport/device-registration-feature/can-not-register-sigfox-device-without-sigfox-device-type|Device registration feature: Can not register Sigfox device without Sigfox device type>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("p in vm.providers")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("p in vm.providers")
 <http://localhost/cucumberTestReport/generic-ui-feature/create-an-operation-via-generic-ui-element|Generic ui feature: Create an operation via generic ui element>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
 <http://localhost/cucumberTestReport/generic-ui-feature/should-have-write-input|Generic ui feature: Should have write input>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
 <http://localhost/cucumberTestReport/jasper-sms-feature/should-display-connectivity-tab|Jasper SMS Feature: Should display Connectivity tab>
-  NoSuchElementError: No element found using locator: by.model("connectivitySettings.url")
+NoSuchElementError: No element found using locator: by.model("connectivitySettings.url")
 <http://localhost/cucumberTestReport/simulator-tests/create-smartrest-template-with-a-message-and-use-its-message-as-an-instruction|Simulator tests: Create smartREST template with a message and use its message as an instruction>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/simulator-tests/delete-smartrest-message-while-assigned-to-simulator|Simulator tests: Delete smartRest message while assigned to simulator>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/smartrest-2.0-messages/edit-a-message-type|SmartREST 2.0 messages: Edit a message type>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/smartrest-2.0-messages/duplicate-message-id|SmartREST 2.0 messages: Duplicate message ID>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/smartrest-2.0-messages/message-type-form-validation-for-optional-api-values|SmartREST 2.0 messages: Message type form validation for optional API values>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/login-feature/tenant-has-no-access-from-outside-the-platform|Login Feature: Tenant has no access from outside the platform>
-  AssertionError
+AssertionError
 <http://localhost/cucumberTestReport/alphabetical-ordering-for-applications/applications-view-in-alphabetical-order-on-application-settings-page|Alphabetical ordering for applications: Applications view in alphabetical order on application settings page>
-  AssertionError: JavaSript Error. Browser Console Log: [ Entry {
+AssertionError: JavaSript Error. Browser Console Log: [ Entry {
 <http://localhost/cucumberTestReport/upload-new-application/edit-uploaded-application|Upload new application: Edit uploaded application>
-  AssertionError: JavaSript Error. Browser Console Log: [ Entry {
+AssertionError: JavaSript Error. Browser Console Log: [ Entry {
 <http://localhost/cucumberTestReport/data-broker-connectors/edit-and-delete-from-details-screen|Data broker connectors: Edit and delete from details screen>
-  AssertionError: JavaSript Error. Browser Console Log: [ Entry {
+AssertionError: JavaSript Error. Browser Console Log: [ Entry {
 <http://localhost/cucumberTestReport/enterprise-edition-branding-tests/create-branded-applications|Enterprise edition branding tests: Create branded applications>
-  AssertionError: expected '' to include 'Built-in applications created'
+AssertionError: expected '' to include 'Built-in applications created'
 <http://localhost/cucumberTestReport/enterprise-edition-branding-tests/create-branded-applications|Enterprise edition branding tests: Create branded applications>
-  WebDriverError: unknown error: Element <i c8y-icon="ellipsis-v" class="fa fw fa-ellipsis-v"></i> is not clickable at point (771, 164). Other element would receive the click: <div class="modal-dialog ">...</div>
+WebDriverError: unknown error: Element <i c8y-icon="ellipsis-v" class="fa fw fa-ellipsis-v"></i> is not clickable at point (771, 164). Other element would receive the click: <div class="modal-dialog ">...</div>
 <http://localhost/cucumberTestReport/jasper-connectivity-settings/should-display-connectivity-settings-tab|Jasper Connectivity Settings: Should display connectivity settings tab>
-  AssertionError: Connectivitytab should be visible in navigation: expected false to equal true
+AssertionError: Connectivitytab should be visible in navigation: expected false to equal true
 <http://localhost/cucumberTestReport/jasper-connectivity-settings/should-accept-correct-credentials|Jasper Connectivity Settings: Should accept correct credentials>
-  NoSuchElementError: No element found using locator: by.model("connectivitySettings.url")
+NoSuchElementError: No element found using locator: by.model("connectivitySettings.url")
 <http://localhost/cucumberTestReport/tenants-usage-statistics/checking-string-property-correctness-in-tenant-usage-statistics-report|Tenants usage statistics: Checking string property correctness in tenant usage statistics report>
-  TimeoutError: Wait timed out after 10000ms
+TimeoutError: Wait timed out after 10000ms
 <http://localhost/cucumberTestReport/tenants-usage-statistics/checking-date/time-property-correctness-in-tenant-usage-statistics-report|Tenants usage statistics: Checking date/time property correctness in tenant usage statistics report>
-  TimeoutError: Wait timed out after 10000ms
+TimeoutError: Wait timed out after 10000ms
 <http://localhost/cucumberTestReport/user-inventory-roles-feature/user-cannot-access-smart-rules-without-granted-inventory-role|User Inventory Roles Feature: User cannot access smart rules without granted inventory role>
-  TimeoutError: Wait timed out after 218ms
+TimeoutError: Wait timed out after 218ms
 <http://localhost/cucumberTestReport/data-point-library-tests/add-a-data-point|Data point library tests: Add a data point>
-  AssertionError
+AssertionError
 <http://localhost/cucumberTestReport/on-alarm-execute-operation-smart-rule/clone-on-alarm-execute-operation-smart-rule|On alarm execute operation smart rule: Clone on alarm execute operation smart rule>
-  AssertionError: JavaSript Error. Browser Console Log: [ Entry {
+AssertionError: JavaSript Error. Browser Console Log: [ Entry {
 <http://localhost/cucumberTestReport/geofence-tests/add-geofence-smart-rule|Geofence tests: Add geofence smart rule>
-  AssertionError: JavaSript Error. Browser Console Log: [ Entry {
+AssertionError: JavaSript Error. Browser Console Log: [ Entry {
 <http://localhost/cucumberTestReport/fieldbus-device-database-entries/invalid-input-entries|Fieldbus device database entries: Invalid input entries>
-  NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
+NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
 <http://localhost/cucumberTestReport/opcua-device/add-and-delete-an-opcua-device-to-the-opcua-device|OPCUA device: Add and delete an opcua device to the opcua device>
-  Error: function timed out after 125000 milliseconds
+Error: function timed out after 125000 milliseconds
 <http://localhost/cucumberTestReport/profibus-device/correct-data-widget-exposed-for-profibus-device|Profibus device: Correct data widget exposed for Profibus device>
-  NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
+NoSuchElementError: No element found using locator: by.model("vm.element.meta.raiseAlarm")
 <http://localhost/cucumberTestReport/device-list-tests/device-showing-title-x-of-y-devices|Device list tests: Device showing title x of y devices>
-  AssertionError: expected false to be true
+AssertionError: expected false to be true
 <http://localhost/cucumberTestReport/impact-device-protocol-feature/edit-impact-protocol|Impact device protocol feature: Edit IMPACT protocol>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("protocol in vm.protocols")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("protocol in vm.protocols")
 <http://localhost/cucumberTestReport/device-registration-feature/register-device-and-add-to-a-subgroup|Device registration feature: Register device and add to a subgroup>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("d in vm.newDeviceRequests")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("d in vm.newDeviceRequests")
 <http://localhost/cucumberTestReport/device-registration-feature/register-multiple-devices|Device registration feature: Register multiple devices>
-  ElementNotVisibleError: element not visible
+ElementNotVisibleError: element not visible
 <http://localhost/cucumberTestReport/device-registration-feature/register-sigfox-device-with-correct-credentials|Device registration feature: Register Sigfox device with correct credentials>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator By(css selector, option)
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator By(css selector, option)
 <http://localhost/cucumberTestReport/device-registration-feature/only-sigfox-device-type-is-available-for-sigfox-device-registration|Device registration feature: Only Sigfox device type is available for Sigfox device registration>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator By(css selector, option)
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator By(css selector, option)
 <http://localhost/cucumberTestReport/generic-ui-feature/should-display-generic-ui-element|Generic ui feature: Should display generic ui element>
-  AssertionError: expected false to be true
+AssertionError: expected false to be true
 <http://localhost/cucumberTestReport/generic-ui-feature/should-have-read-only-input|Generic ui feature: Should have read only input>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
 <http://localhost/cucumberTestReport/generic-ui-feature/should-have-boolean-value|Generic ui feature: Should have boolean value>
-  NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
+NoSuchElementError: Index out of bound. Trying to access element at index: 0, but there are only 0 elements that match locator by.repeater("card in vm.sortedCards")
 <http://localhost/cucumberTestReport/simulator-tests/delete-smartrest-template-while-assigned-to-simulator-and-show-alarm|Simulator tests: Delete smartRest template while assigned to simulator and show alarm>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/simulator-tests/edit-smartrest-message-while-assigned-to-simulator|Simulator tests: Edit smartRest message while assigned to simulator>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/smartrest-2.0-messages/add-a-message-type|SmartREST 2.0 messages: Add a message type>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/smartrest-2.0-messages/delete-a-message-type|SmartREST 2.0 messages: Delete a message type>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/smartrest-2.0-messages/add-complex-message-type-with-optional-parameters|SmartREST 2.0 messages: Add complex message type with optional parameters>
-  NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
+NoSuchElementError: No element found using locator: by.model("$ctrl.requestTemplate.msgId")
 <http://localhost/cucumberTestReport/alarm-tests/realtime-alarm-de-duplication-under-device/alarms|Alarm tests: Realtime alarm de-duplication under device/alarms>
-  AssertionError: Incorrect alarms' amount.: expected 2 to equal 1
+AssertionError: Incorrect alarms' amount.: expected 2 to equal 1

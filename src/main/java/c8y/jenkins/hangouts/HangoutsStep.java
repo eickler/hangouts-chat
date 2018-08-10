@@ -51,19 +51,23 @@ public class HangoutsStep extends Step implements Serializable {
 
 	@Override
 	public StepExecution start(StepContext context) throws Exception {
-		return new Execution(this, context);
+		HangoutsRoom hangoutsRoom = new HangoutsRoom();
+		hangoutsRoom.setRoom(room);
+		return new Execution(context, hangoutsRoom, message);
 	}
 
 	public static class Execution extends SynchronousStepExecution<Void> {
 
 		private static final long serialVersionUID = 6872125878600187425L;
 
-		private HangoutsStep step;
+		private HangoutsRoom hangoutsRoom;
+		private String optionalMessage;
 		private Run<?,?> run;
 
-		protected Execution(HangoutsStep step, StepContext context) {
+		protected Execution(StepContext context, HangoutsRoom hangoutsRoom, String optionalMessage) {
 			super(context);
-			this.step = step;
+			this.hangoutsRoom = hangoutsRoom;
+			this.optionalMessage = optionalMessage;
 
 			try {
 				this.run = context.get(Run.class);
@@ -76,18 +80,17 @@ public class HangoutsStep extends Step implements Serializable {
 
 		@Override
 		protected Void run() throws Exception {
-			HangoutsSpace space = new HangoutsSpace(step.getRoom());
-			Set<User> members = space.getMembers();
+			Set<User> members = hangoutsRoom.getMembers();
 
 			RunReporter reporter = new RunReporter(run);
 			String report = reporter.report(members);
 			
-			if (step.getMessage() != null && step.getMessage().length() > 0) {
-				space.send(step.getMessage());
+			if (optionalMessage != null && optionalMessage.length() > 0) {
+				hangoutsRoom.send(optionalMessage);
 			}
 			
 			if (report != null && report.length() > 0) {
-				space.send(report);
+				hangoutsRoom.send(report);
 			}
 
 			return null;

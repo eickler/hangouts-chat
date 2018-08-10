@@ -5,6 +5,8 @@ import java.security.GeneralSecurityException;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.stereotype.Component;
+
 import com.google.api.client.http.GenericUrl;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpResponse;
@@ -16,7 +18,8 @@ import com.google.api.services.chat.v1.model.Membership;
 import com.google.api.services.chat.v1.model.Message;
 import com.google.api.services.chat.v1.model.User;
 
-public class HangoutsSpace {
+@Component
+public class HangoutsRoom {
 	public static final String SPACE_URL = "https://chat.googleapis.com/v1/spaces/";
 	public static final String MESSAGE_URL = "/messages";
 	public static final String MEMBERS_URL = "/members";
@@ -25,11 +28,11 @@ public class HangoutsSpace {
 	private GenericUrl membersUrl;
 	private JacksonFactory factory = new JacksonFactory();
 
-	public HangoutsSpace(String spaceId) {
-		this.messageUrl = new GenericUrl(SPACE_URL + spaceId + MESSAGE_URL);
-		this.membersUrl = new GenericUrl(SPACE_URL + spaceId + MEMBERS_URL);
+	public void setRoom(String roomId) {
+		this.messageUrl = new GenericUrl(SPACE_URL + roomId + MESSAGE_URL);
+		this.membersUrl = new GenericUrl(SPACE_URL + roomId + MEMBERS_URL);		
 	}
-
+	
 	public void send(String text) throws IOException {
 		try {
 			Message message = new Message();
