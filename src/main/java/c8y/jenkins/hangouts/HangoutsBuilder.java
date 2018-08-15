@@ -68,8 +68,6 @@ public class HangoutsBuilder extends Notifier {
 		public FormValidation doCheckRoom(@QueryParameter String value) throws IOException, ServletException {
 			if (value.length() == 0)
 				return FormValidation.error(Messages.HangoutsBuilder_DescriptorImpl_errors_missingRoom());
-			if (value.length() < 4)
-				return FormValidation.warning(Messages.HangoutsBuilder_DescriptorImpl_warnings_tooShort());
 			return FormValidation.ok();
 		}
 

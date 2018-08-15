@@ -72,6 +72,6 @@ public class RequestFactory {
 				return cred.getContent();
 			}
 		}
-		throw new IOException("Credentials not found.");
+		throw new IOException("Credentials not found. Please add your credentials file to Jenkins using the ID \"Hangouts\".");
 	}
 }

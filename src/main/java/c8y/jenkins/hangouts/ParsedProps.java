@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Helper class to extract sets of element content (<element>content</element>) from an XML file using SAX. 
+ * Helper class to extract sets of element content (&lt;element&gt;content&lt;/element&gt;) from an XML file using SAX. 
  * @author eickler
  *
  */
@@ -41,6 +41,9 @@ public class ParsedProps {
 	
 	/**
 	 * Gather element content from potentially multiple chunks passed in by SAX.
+	 * @param ch Chunk of characters
+	 * @param start Start character
+	 * @param length Number of characters
 	 */
 	public void characters(char[] ch, int start, int length) {
 		if (currentProp != null) {
