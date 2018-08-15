@@ -5,7 +5,7 @@ This is a Jenkins plugin to connect Jenkins to Google Hangouts Chat rooms. It ca
 
 # Setup (Google side)
 
-To set it up, you need to first create a service account in Google that can be used by the plugin. The process is described here: https://developers.google.com/hangouts/chat/how-tos/service-accounts#creating_and_using_a_service_account. The private key needs to be placed in src/main/resources/cumulocity_api.json.
+To set it up, you need to first create a service account in Google that can be used by the plugin. The process is described here: https://developers.google.com/hangouts/chat/how-tos/service-accounts#creating_and_using_a_service_account. The private key needs to be placed in src/main/resources/hangouts_api.json.
 
 Then create a bot as described in https://developers.google.com/hangouts/chat/how-tos/bots-publish. Give it a name (Jenkins) and an image. You should now be able to add the bot to rooms in Hangouts Chat. Go to a room, click "Add people and bots" in a room, search for your bot and click "Send". 
 

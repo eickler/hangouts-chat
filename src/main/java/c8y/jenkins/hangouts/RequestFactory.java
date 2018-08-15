@@ -17,7 +17,7 @@ import com.google.api.client.http.HttpTransport;
 
 public class RequestFactory {
 	private static final List<String> SCOPE = Arrays.asList("https://www.googleapis.com/auth/chat.bot");
-	private static final String PATH = "cumulocity_api.json";
+	private static final String PATH = "hangouts_api.json";
 
 	private static HttpRequestFactory factory;
 
