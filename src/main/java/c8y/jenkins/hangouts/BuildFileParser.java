@@ -13,6 +13,14 @@ import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+/**
+ * A BuildFileParser parses XML test reports and produces a list of failures
+ * that can be passed to a BuildFileFormatter. Each failure consists of various
+ * properties describing the failure.
+ * 
+ * @author eickler
+ *
+ */
 public abstract class BuildFileParser extends DefaultHandler {
 
 	private String filename;
@@ -23,7 +31,7 @@ public abstract class BuildFileParser extends DefaultHandler {
 	public BuildFileParser(String filename) {
 		this.filename = filename;
 	}
-	
+
 	public boolean tryParse() {
 		try (InputStream is = new FileInputStream(filename)) {
 			return tryParse(is);
@@ -44,27 +52,27 @@ public abstract class BuildFileParser extends DefaultHandler {
 			return false;
 		}
 	}
-	
-	public void setCurrentProp(String prop) {
-		currentFailure.setCurrentProp(prop);
+
+	public void startParsingOf(String prop) {
+		currentFailure.startParsingOf(prop);
 	}
-	
-	public void flushCurrentProp() {
-		currentFailure.flushCurrentProp();
+
+	public void endParsingAndStoreContent() {
+		currentFailure.endParsingAndStoreContent();
 	}
-	
+
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		currentFailure.characters(ch, start, length);
 	}
 
 	public void flush() {
-		failures.add(new ParsedProps(currentFailure));		
+		failures.add(new ParsedProps(currentFailure));
 	}
-	
+
 	public List<ParsedProps> getFailures() {
 		return failures;
 	}
-	
+
 	public abstract BuildFileFormatter getFormatter();
 }

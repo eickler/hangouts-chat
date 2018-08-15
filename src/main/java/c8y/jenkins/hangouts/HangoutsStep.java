@@ -1,6 +1,5 @@
 package c8y.jenkins.hangouts;
 
-import java.beans.Transient;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Set;
@@ -25,6 +24,12 @@ import hudson.Extension;
 import hudson.model.Run;
 import hudson.util.FormValidation;
 
+/**
+ * A Jenkins Pipeline step for notifying a chat room about a failed build. See also {@link HangoutsBuilder}.
+ * 
+ * @author eickler
+ *
+ */
 public class HangoutsStep extends Step implements Serializable {
 
 	private static final long serialVersionUID = -4772889830814883958L;

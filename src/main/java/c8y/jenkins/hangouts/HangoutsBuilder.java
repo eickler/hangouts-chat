@@ -23,6 +23,12 @@ import hudson.tasks.Notifier;
 import hudson.tasks.Publisher;
 import hudson.util.FormValidation;
 
+/**
+ * A post-build action for notifying a chat room about a failed build. See also {@link HangoutsStep}.
+ * 
+ * @author eickler
+ *
+ */
 public class HangoutsBuilder extends Notifier {
 
 	public static final int MAX_ENTRIES = 10;
@@ -33,7 +39,7 @@ public class HangoutsBuilder extends Notifier {
 	public HangoutsBuilder(String room) {
 		this.room = room;
 	}
-	
+
 	@Override
 	public boolean perform(AbstractBuild<?, ?> build, Launcher launcher, BuildListener listener)
 			throws InterruptedException, IOException {

@@ -16,6 +16,12 @@ import com.google.api.services.chat.v1.model.Membership;
 import com.google.api.services.chat.v1.model.Message;
 import com.google.api.services.chat.v1.model.User;
 
+/**
+ * A hangouts chat implementation of the simple Chatroom API.
+ * 
+ * @author eickler
+ *
+ */
 public class HangoutsChatroom implements Chatroom {
 	public static final String SPACE_URL = "https://chat.googleapis.com/v1/spaces/";
 	public static final String MESSAGE_URL = "/messages";
@@ -41,11 +47,11 @@ public class HangoutsChatroom implements Chatroom {
 		Set<User> result = new HashSet<User>();
 
 		try {
-			GenericUrl membersUrl = new GenericUrl(SPACE_URL + roomId + MEMBERS_URL);		
+			GenericUrl membersUrl = new GenericUrl(SPACE_URL + roomId + MEMBERS_URL);
 			HttpRequest request = RequestFactory.getRequest(membersUrl);
 			request.setParser(new JsonObjectParser(factory));
 			HttpResponse response = request.execute();
-			
+
 			ListMembershipsResponse memberships = response.parseAs(ListMembershipsResponse.class);
 			for (Membership member : memberships.getMemberships()) {
 				result.add(member.getMember());
@@ -55,5 +61,5 @@ public class HangoutsChatroom implements Chatroom {
 		}
 
 		return result;
-	}	
+	}
 }

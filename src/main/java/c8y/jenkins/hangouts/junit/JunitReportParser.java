@@ -19,7 +19,7 @@ public class JunitReportParser extends BuildFileParser {
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		if (CLASS_NAME.equals(qName) || TEST_NAME.equals(qName) || ERROR_DETAILS.equals(qName)) {
-			setCurrentProp(qName);
+			startParsingOf(qName);
 		} 
 
 		if (ERROR_DETAILS.equals(qName)) {
@@ -29,7 +29,7 @@ public class JunitReportParser extends BuildFileParser {
 
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
-		flushCurrentProp();
+		endParsingAndStoreContent();
 
 		if (CASE.equals(qName) && isFailed) {
 			flush();

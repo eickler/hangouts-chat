@@ -23,18 +23,18 @@ public class CucumberReportParser extends BuildFileParser {
 		}
 
 		if (NAME.equals(qName)) {
-			setCurrentProp(nameMode);
+			startParsingOf(nameMode);
 			nameMode = null;
 		}
 
 		if (ID.equals(qName) || ERROR_MESSAGE.equals(qName)) {
-			setCurrentProp(qName);
+			startParsingOf(qName);
 		}
 	}
 
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
-		flushCurrentProp();
+		endParsingAndStoreContent();
 
 		if (ERROR_MESSAGE.equals(qName)) {
 			flush();

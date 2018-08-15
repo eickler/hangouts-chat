@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.jenkinsci.plugins.plaincredentials.FileCredentials;
 import org.jenkinsci.plugins.workflow.job.WorkflowRun;
+
+import com.cloudbees.plugins.credentials.CredentialsProvider;
 
 import c8y.jenkins.hangouts.cucumber.CucumberReportParser;
 import c8y.jenkins.hangouts.junit.JunitReportParser;
@@ -14,6 +17,12 @@ import hudson.model.Run;
 import hudson.model.User;
 import jenkins.model.Jenkins;
 
+/**
+ * Produce a short and polite report about a build failure.
+ * 
+ * @author eickler
+ *
+ */
 public class RunReporter {
 	public static final int MAX_LOG_ENTRIES = 10;
 

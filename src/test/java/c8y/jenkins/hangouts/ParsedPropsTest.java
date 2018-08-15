@@ -14,10 +14,10 @@ public class ParsedPropsTest {
 
 	@Test
 	public void addProp() {
-		props.setCurrentProp(TESTPROP);
+		props.startParsingOf(TESTPROP);
 		
 		props.characters(TESTVALUE.toCharArray(), 0, TESTVALUE.length());
-		props.flushCurrentProp();
+		props.endParsingAndStoreContent();
 		
 		assertEquals(TESTVALUE, props.get(TESTPROP));
 	}
@@ -25,33 +25,33 @@ public class ParsedPropsTest {
 	@Test
 	public void ignoreProp() {
 		props.characters(TESTVALUE.toCharArray(), 0, TESTVALUE.length());
-		props.flushCurrentProp();
+		props.endParsingAndStoreContent();
 
 		assertEquals(0, props.props.size());
 	}
 
 	@Test
 	public void resetProp() {
-		props.setCurrentProp(TESTPROP);
+		props.startParsingOf(TESTPROP);
 
 		props.characters(TESTVALUE.toCharArray(), 0, TESTVALUE.length());
-		props.flushCurrentProp();
+		props.endParsingAndStoreContent();
 		props.characters(TESTVALUE2.toCharArray(), 0, TESTVALUE2.length());
-		props.flushCurrentProp();
+		props.endParsingAndStoreContent();
 
 		assertEquals(TESTVALUE.toString(), props.get(TESTPROP));
 	}
 
 	@Test
 	public void addProps() {
-		props.setCurrentProp(TESTPROP);
+		props.startParsingOf(TESTPROP);
 		props.characters(TESTVALUE.toCharArray(), 0, TESTVALUE.length());
-		props.flushCurrentProp();
+		props.endParsingAndStoreContent();
 
 
-		props.setCurrentProp(TESTPROP2);
+		props.startParsingOf(TESTPROP2);
 		props.characters(TESTVALUE2.toCharArray(), 0, TESTVALUE2.length());
-		props.flushCurrentProp();
+		props.endParsingAndStoreContent();
 		
 		assertEquals(TESTVALUE.toString(), props.get(TESTPROP));	
 		assertEquals(TESTVALUE2.toString(), props.get(TESTPROP2));	

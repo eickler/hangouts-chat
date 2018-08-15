@@ -3,6 +3,11 @@ package c8y.jenkins.hangouts;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Helper class to extract sets of element content (<element>content</element>) from an XML file using SAX. 
+ * @author eickler
+ *
+ */
 public class ParsedProps {
 	Map<String,String> props;
 	String currentProp;
@@ -15,14 +20,14 @@ public class ParsedProps {
 	public ParsedProps(ParsedProps otherProps) {
 		this.props = new HashMap<String,String>(otherProps.props);
 	}
-	
-	public void setCurrentProp(String prop) {
-		flushCurrentProp();
+
+	public void startParsingOf(String prop) {
+		endParsingAndStoreContent();
 		this.currentProp = prop;
 		this.currentValue = new StringBuffer();
 	}
 	
-	public void flushCurrentProp() {
+	public void endParsingAndStoreContent() {
 		if (currentProp != null) {
 			props.put(currentProp, currentValue.toString());
 			this.currentProp = null;
@@ -34,6 +39,9 @@ public class ParsedProps {
 		return props.get(prop);
 	}
 	
+	/**
+	 * Gather element content from potentially multiple chunks passed in by SAX.
+	 */
 	public void characters(char[] ch, int start, int length) {
 		if (currentProp != null) {
 			currentValue.append(ch, start, length);
