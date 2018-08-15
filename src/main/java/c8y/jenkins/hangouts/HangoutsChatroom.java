@@ -5,8 +5,6 @@ import java.security.GeneralSecurityException;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.stereotype.Component;
-
 import com.google.api.client.http.GenericUrl;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpResponse;
@@ -18,40 +16,36 @@ import com.google.api.services.chat.v1.model.Membership;
 import com.google.api.services.chat.v1.model.Message;
 import com.google.api.services.chat.v1.model.User;
 
-@Component
-public class HangoutsRoom {
+public class HangoutsChatroom implements Chatroom {
 	public static final String SPACE_URL = "https://chat.googleapis.com/v1/spaces/";
 	public static final String MESSAGE_URL = "/messages";
 	public static final String MEMBERS_URL = "/members";
 
-	private GenericUrl messageUrl;
-	private GenericUrl membersUrl;
 	private JacksonFactory factory = new JacksonFactory();
 
-	public void setRoom(String roomId) {
-		this.messageUrl = new GenericUrl(SPACE_URL + roomId + MESSAGE_URL);
-		this.membersUrl = new GenericUrl(SPACE_URL + roomId + MEMBERS_URL);		
-	}
-	
-	public void send(String text) throws IOException {
+	public void send(String roomId, String text) throws IOException {
 		try {
 			Message message = new Message();
 			message.setText(text);
-			JsonHttpContent json = new JsonHttpContent(factory, message);
-			HttpRequest request = RequestFactory.postRequest(messageUrl, json);
+			JsonHttpContent jsonMessage = new JsonHttpContent(factory, message);
+
+			GenericUrl messageUrl = new GenericUrl(SPACE_URL + roomId + MESSAGE_URL);
+			HttpRequest request = RequestFactory.postRequest(messageUrl, jsonMessage);
 			request.execute();
 		} catch (IOException | GeneralSecurityException e) {
 			throw new IOException(e);
 		}
 	}
 
-	public Set<User> getMembers() throws IOException {
+	public Set<User> getMembers(String roomId) throws IOException {
 		Set<User> result = new HashSet<User>();
 
 		try {
+			GenericUrl membersUrl = new GenericUrl(SPACE_URL + roomId + MEMBERS_URL);		
 			HttpRequest request = RequestFactory.getRequest(membersUrl);
 			request.setParser(new JsonObjectParser(factory));
 			HttpResponse response = request.execute();
+			
 			ListMembershipsResponse memberships = response.parseAs(ListMembershipsResponse.class);
 			for (Membership member : memberships.getMemberships()) {
 				result.add(member.getMember());

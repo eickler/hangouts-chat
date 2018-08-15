@@ -8,8 +8,6 @@ import javax.servlet.ServletException;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.google.api.services.chat.v1.model.User;
 
@@ -25,25 +23,17 @@ import hudson.tasks.Notifier;
 import hudson.tasks.Publisher;
 import hudson.util.FormValidation;
 
-@Component
 public class HangoutsBuilder extends Notifier {
 
 	public static final int MAX_ENTRIES = 10;
 
-	private final String room;
-
-	@Autowired
-	private HangoutsRoom hangoutsRoom;
+	private String room;
 
 	@DataBoundConstructor
 	public HangoutsBuilder(String room) {
 		this.room = room;
 	}
-
-	public String getRoom() {
-		return room;
-	}
-
+	
 	@Override
 	public boolean perform(AbstractBuild<?, ?> build, Launcher launcher, BuildListener listener)
 			throws InterruptedException, IOException {
@@ -55,14 +45,14 @@ public class HangoutsBuilder extends Notifier {
 	}
 
 	private void sendBrokenBuildMessage(AbstractBuild<?, ?> build) throws IOException {
-		hangoutsRoom.setRoom(room);
-		Set<User> members = hangoutsRoom.getMembers();
+		Chatroom chatroom = ChatFactory.get();
+		Set<User> members = chatroom.getMembers(room);
 
 		RunReporter reporter = new RunReporter(build);
 		String report = reporter.report(members);
 
 		if (report != null && report.length() > 0) {
-			hangoutsRoom.send(report);
+			chatroom.send(room, report);
 		}
 	}
 

@@ -1,5 +1,6 @@
 package c8y.jenkins.hangouts;
 
+import java.beans.Transient;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Set;
@@ -14,6 +15,7 @@ import org.jenkinsci.plugins.workflow.steps.StepDescriptor;
 import org.jenkinsci.plugins.workflow.steps.StepExecution;
 import org.jenkinsci.plugins.workflow.steps.SynchronousStepExecution;
 import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.DataBoundSetter;
 import org.kohsuke.stapler.QueryParameter;
 
 import com.google.api.services.chat.v1.model.User;
@@ -45,28 +47,27 @@ public class HangoutsStep extends Step implements Serializable {
 		return message;
 	}
 
+	@DataBoundSetter 
 	public void setMessage(String message) {
 		this.message = message;
 	}
 
 	@Override
 	public StepExecution start(StepContext context) throws Exception {
-		HangoutsRoom hangoutsRoom = new HangoutsRoom();
-		hangoutsRoom.setRoom(room);
-		return new Execution(context, hangoutsRoom, message);
+		return new Execution(context, room, message);
 	}
 
 	public static class Execution extends SynchronousStepExecution<Void> {
 
 		private static final long serialVersionUID = 6872125878600187425L;
 
-		private HangoutsRoom hangoutsRoom;
+		private String roomId;
 		private String optionalMessage;
-		private Run<?,?> run;
+		private transient Run<?,?> run;
 
-		protected Execution(StepContext context, HangoutsRoom hangoutsRoom, String optionalMessage) {
+		protected Execution(StepContext context, String roomId, String optionalMessage) {
 			super(context);
-			this.hangoutsRoom = hangoutsRoom;
+			this.roomId = roomId;
 			this.optionalMessage = optionalMessage;
 
 			try {
@@ -80,17 +81,18 @@ public class HangoutsStep extends Step implements Serializable {
 
 		@Override
 		protected Void run() throws Exception {
-			Set<User> members = hangoutsRoom.getMembers();
+			Chatroom chatroom = ChatFactory.get();
+			Set<User> members = chatroom.getMembers(roomId);
 
 			RunReporter reporter = new RunReporter(run);
 			String report = reporter.report(members);
 			
 			if (optionalMessage != null && optionalMessage.length() > 0) {
-				hangoutsRoom.send(optionalMessage);
+				chatroom.send(roomId, optionalMessage);
 			}
 			
 			if (report != null && report.length() > 0) {
-				hangoutsRoom.send(report);
+				chatroom.send(roomId, report);
 			}
 
 			return null;

@@ -40,7 +40,8 @@ public class RunReporter {
 		}
 		buffer.append("\n");
 
-		// We need to probably do a better job in telling the people how many items there are and if the log was truncated.
+		// We need to probably do a better job in telling the people how many items
+		// there are and if the log was truncated.
 		String logSummary = truncate(getLogSummary(), MAX_LOG_ENTRIES);
 		buffer.append(logSummary);
 
@@ -60,7 +61,7 @@ public class RunReporter {
 				result.add("<" + user.getName() + ">");
 			}
 		}
-		
+
 		return result;
 	}
 
@@ -128,15 +129,19 @@ public class RunReporter {
 	}
 
 	private String getRunUrl() {
-		String rootUrl = Jenkins.getInstanceOrNull().getRootUrl();
-		String runRelativeUrl = run.getUrl();
-		return rootUrl + "/" + runRelativeUrl;
+		Jenkins jenkins = Jenkins.getInstanceOrNull();
+		if (jenkins != null) {
+			String rootUrl = jenkins.getRootUrl();
+			String runRelativeUrl = run.getUrl();
+			return rootUrl + "/" + runRelativeUrl;
+		} else {
+			return "";
+		}
 	}
 
 	private String getRunFolder() {
 		return run.getRootDir().getAbsolutePath();
 	}
-
 
 	static String truncate(String longString, int lines) {
 		int index = 0;
