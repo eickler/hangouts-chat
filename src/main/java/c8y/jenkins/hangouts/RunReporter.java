@@ -58,7 +58,7 @@ public class RunReporter {
 	}
 
 	private String getJob() {
-		return run.getParent().getDisplayName();
+		return run.getParent().getFullDisplayName();
 	}
 
 	private Set<String> getCulprits(Set<com.google.api.services.chat.v1.model.User> members) {
