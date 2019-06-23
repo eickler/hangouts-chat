@@ -12757,7 +12757,15 @@
           <errorStackTrace>java.lang.Exception: test timed out after 30000 milliseconds
 	at com.cumulocity.smartrest.SmartRESTModuleTest.shouldContainChunkedEncodingWhenSendRequest(SmartRESTModuleTest.java:124)
 </errorStackTrace>
-          <errorDetails>test timed out after 30000 milliseconds</errorDetails>
+          <errorDetails>Error creating bean with name 'managedObjectsRepository' defined in class path resource [META-INF/spring/notification-service-testcontext.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public static java.lang.Object org.mockito.Mockito.mock(java.lang.Class)] threw exception; nested exception is org.mockito.exceptions.base.MockitoException:
+              Mockito cannot mock this class: interface com.cumulocity.repository.inventory.ManagedObjectsRepository.
+
+              Mockito can only mock non-private &amp; non-final classes.
+              If you're not sure why you're getting this error, please report to the mailing list.
+
+
+              Java               : 1.7
+              JVM vendor name    : Oracle Corporation</errorDetails>
           <stdout>2018-08-06 06:27:48,204 [main] DEBUG org.eclipse.jetty.util.log  - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
 2018-08-06 06:27:48,274 [main] DEBUG org.eclipse.jetty.servlet.ServletHandler  - filterNameMap={}
 2018-08-06 06:27:48,274 [main] DEBUG org.eclipse.jetty.servlet.ServletHandler  - pathFilters=null
@@ -12781,7 +12789,7 @@
 2018-08-06 06:27:48,339 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting org.eclipse.jetty.server.handler.HandlerList@5cc626b1
 2018-08-06 06:27:48,339 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/}
 2018-08-06 06:27:48,354 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Thread Context classloader sun.misc.Launcher$AppClassLoader@741378ec
-2018-08-06 06:27:48,354 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d 
+2018-08-06 06:27:48,354 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d
 2018-08-06 06:27:48,354 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebInfConfiguration@c229885
 2018-08-06 06:27:48,357 [main] DEBUG org.eclipse.jetty.webapp.WebInfConfiguration  - Set temp dir /tmp/jetty-0.0.0.0-8586-webapp-_s-any-
 2018-08-06 06:27:48,358 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebXmlConfiguration@377c016e
@@ -13245,7 +13253,7 @@ er$SelectSet$1@58275eca to stopped ConnectorPool{1&lt;=0&lt;=10/10,100}
 2018-08-06 06:28:19,728 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting org.eclipse.jetty.server.handler.HandlerList@1dddf775
 2018-08-06 06:28:19,728 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/}
 2018-08-06 06:28:19,728 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Thread Context classloader sun.misc.Launcher$AppClassLoader@741378ec
-2018-08-06 06:28:19,728 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d 
+2018-08-06 06:28:19,728 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d
 2018-08-06 06:28:19,728 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebInfConfiguration@c229885
 2018-08-06 06:28:19,729 [main] DEBUG org.eclipse.jetty.webapp.WebInfConfiguration  - Set temp dir /tmp/jetty-0.0.0.0-8586-webapp-_s-any-
 2018-08-06 06:28:19,729 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebXmlConfiguration@377c016e
@@ -13723,7 +13731,7 @@ java.nio.channels.ClosedChannelException
 2018-08-06 06:28:50,199 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting org.eclipse.jetty.server.handler.HandlerList@745d82aa
 2018-08-06 06:28:50,199 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/}
 2018-08-06 06:28:50,199 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Thread Context classloader sun.misc.Launcher$AppClassLoader@741378ec
-2018-08-06 06:28:50,199 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d 
+2018-08-06 06:28:50,199 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d
 2018-08-06 06:28:50,199 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebInfConfiguration@c229885
 2018-08-06 06:28:50,199 [main] DEBUG org.eclipse.jetty.webapp.WebInfConfiguration  - Set temp dir /tmp/jetty-0.0.0.0-8586-webapp-_s-any-
 2018-08-06 06:28:50,200 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebXmlConfiguration@377c016e
@@ -14216,7 +14224,7 @@ java.nio.channels.ClosedChannelException
 2018-08-06 06:29:20,705 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting org.eclipse.jetty.server.handler.HandlerList@173cc2fd
 2018-08-06 06:29:20,706 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/}
 2018-08-06 06:29:20,706 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Thread Context classloader sun.misc.Launcher$AppClassLoader@741378ec
-2018-08-06 06:29:20,706 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d 
+2018-08-06 06:29:20,706 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d
 2018-08-06 06:29:20,706 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebInfConfiguration@c229885
 2018-08-06 06:29:20,706 [main] DEBUG org.eclipse.jetty.webapp.WebInfConfiguration  - Set temp dir /tmp/jetty-0.0.0.0-8586-webapp-_s-any-
 2018-08-06 06:29:20,706 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebXmlConfiguration@377c016e
@@ -14724,7 +14732,7 @@ java.nio.channels.ClosedChannelException
 2018-08-06 06:29:51,164 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting org.eclipse.jetty.server.handler.HandlerList@6fe1a453
 2018-08-06 06:29:51,164 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/}
 2018-08-06 06:29:51,164 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Thread Context classloader sun.misc.Launcher$AppClassLoader@741378ec
-2018-08-06 06:29:51,164 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d 
+2018-08-06 06:29:51,164 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d
 2018-08-06 06:29:51,164 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebInfConfiguration@c229885
 2018-08-06 06:29:51,165 [main] DEBUG org.eclipse.jetty.webapp.WebInfConfiguration  - Set temp dir /tmp/jetty-0.0.0.0-8586-webapp-_s-any-
 2018-08-06 06:29:51,165 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebXmlConfiguration@377c016e
@@ -15244,7 +15252,7 @@ java.nio.channels.ClosedChannelException
 2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting org.eclipse.jetty.server.handler.HandlerList@3a45590
 2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.util.component.AbstractLifeCycle  - starting o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/}
 2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Thread Context classloader sun.misc.Launcher$AppClassLoader@741378ec
-2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d 
+2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - Parent class loader: sun.misc.Launcher$ExtClassLoader@2a68097d
 2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebInfConfiguration@c229885
 2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.webapp.WebInfConfiguration  - Set temp dir /tmp/jetty-0.0.0.0-8586-webapp-_s-any-
 2018-08-06 06:30:21,662 [main] DEBUG org.eclipse.jetty.webapp.WebAppContext  - preConfigure o.e.j.w.WebAppContext{/s,file:/var/jenkins_home/workspace/Cumulocity-Platform-Services-BUILD/smartrest/src/test/webapp/} with org.eclipse.jetty.webapp.WebXmlConfiguration@377c016e
@@ -22654,6 +22662,40 @@ or]; root of factory hierarchy
           <className>com.cumulocity.user.service.UserFacadeTest</className>
           <testName>shouldReturnEmptyWhenNoUserPreferences</testName>
           <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>33.099957</duration>
+          <className>REST API Authentication.Brute force attack prevention</className>
+          <testName>Brute force attack prevention</testName>
+          <skipped>false</skipped>
+          <errorStackTrace>
+              Scenario: Brute force attack prevention
+
+              Given that cumulocity platform is installed
+              And I have a tenant with prefix &quot;sampletenant&quot; with application &quot;{&quot;name&quot;
+              : &quot;sample_application&quot;, &quot;key&quot; : &quot;secretKeyForTheApplication&quot;}&quot;
+              assigned
+              When I create user with username &quot;sample_user&quot;
+              And I access resource &quot;/user/currentUser&quot; as current tenant and as user &quot;sample_user&quot;
+              with password &quot;password&quot;
+              Then the HTTP Response Code should be 200
+              When I access resource &quot;/user/currentUser&quot; as current tenant and as user &quot;sample_user&quot;
+              with password &quot;blabla&quot; 101 times
+              Then &quot;sample_user&quot; should be disabled
+              When I get audit log for &quot;User&quot;
+              Then count of audit logs should be 2
+              And audit log at index 0 should be &quot;User sample_user created&quot;
+              And audit log at index 1 should be &quot;User sample_user updated: enabled=&apos;false&apos;&quot;
+
+              Message:
+
+              expected 2 items, got 1 (RSpec::Expectations::ExpectationNotMetError)
+              ./step_definitions/rest_apis/common_rest_steps.rb:187:in `/^count of audit logs should be
+              (\d+)$/&apos;
+              features/rest_apis/authentication.feature:93:in `Then count of audit logs should be 2&apos;
+          </errorStackTrace>
+          <errorDetails>failed Brute force attack prevention</errorDetails>
           <failedSince>0</failedSince>
         </case>
       </cases>

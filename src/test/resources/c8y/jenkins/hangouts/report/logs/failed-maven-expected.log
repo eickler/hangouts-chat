@@ -1,0 +1,228 @@
+[ERROR] There are missing 3rd party informations:
+artifact: tomcat-annotations-api-8.5.34.jar, property: copyright
+artifact: tomcat-annotations-api-8.5.34.jar, property: license
+[ERROR] Please add missing entries to the mapper.properties file in the source of 3rd-license-maven-plugin or  - as a temporary workaround - to the file in the current project (src/main/resources/license/mapper.properties).
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] Cumulocity :: Agents 9.19.0-SNAPSHOT ............... SUCCESS [  0.344 s]
+[INFO] Cumulocity :: Agents :: Billwerk ................... SUCCESS [  0.009 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Insightly ...... SUCCESS [  0.851 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Marketo ........ SUCCESS [  0.401 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Server ......... SUCCESS [  9.227 s]
+[INFO] Cumulocity :: Agents :: Simulator .................. SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Mock .......... SUCCESS [  0.603 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Test ........... SUCCESS [ 18.013 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Core .......... SUCCESS [  0.999 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Platform ...... SUCCESS [  2.928 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Server ........ SUCCESS [  5.854 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Test .......... SUCCESS [01:19 min]
+[INFO] Cumulocity :: Agents :: LPWAN Backend .............. SUCCESS [  3.062 s]
+[INFO] Cumulocity :: Agents :: Actility Agent ............. SUCCESS [  0.007 s]
+[INFO] Cumulocity :: Agents :: Actility Agent :: Server ... SUCCESS [ 12.601 s]
+[INFO] Cumulocity :: Agents :: SSL Management Agent ....... SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: SSL Management Agent :: Server SUCCESS [  4.633 s]
+[INFO] Cumulocity :: Agents :: Tekelec Agent .............. SUCCESS [  0.006 s]
+[INFO] Cumulocity :: Agents :: Tekelec Agent .............. SUCCESS [  4.150 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway ................ SUCCESS [  0.006 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Model ....... SUCCESS [  2.340 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Server ...... SUCCESS [  9.903 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Client ...... SUCCESS [  1.510 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless ............ SUCCESS [  0.010 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Simulator SUCCESS [  9.638 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Test ........ SUCCESS [ 14.962 s]
+[INFO] Cumulocity :: Agents :: NetComm Agent .............. SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: NetComm Agent :: Server .... SUCCESS [  4.044 s]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent ......... SUCCESS [  0.021 s]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent :: Simulator SUCCESS [  1.473 s]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent :: Server SUCCESS [  4.092 s]
+[INFO] Cumulocity :: Agents :: Vaisala Agent .............. SUCCESS [  0.007 s]
+[INFO] Cumulocity :: Agents :: Vaisala Agent :: Server .... SUCCESS [  3.882 s]
+[INFO] Cumulocity :: Agents :: Speech Agent ............... SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: Speech Agent :: Server ..... SUCCESS [ 12.933 s]
+[INFO] Cumulocity :: Agents :: Cellid Agent ............... SUCCESS [  0.135 s]
+[INFO] Cumulocity :: Agents :: Cellid Agent :: Server ..... SUCCESS [  6.931 s]
+[INFO] Cumulocity :: Agents :: OpenIT Agent ............... SUCCESS [  0.041 s]
+[INFO] Cumulocity :: Agents :: OpenIT Agent :: Server ..... SUCCESS [  3.445 s]
+[INFO] Cumulocity :: Agents :: Push Agent ................. SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: Push Forwarding Agent :: Server SUCCESS [  3.865 s]
+[INFO] Cumulocity :: Agents :: User Registration Agent .... SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: User Registration Agent :: Server SUCCESS [  4.478 s]
+[INFO] Cumulocity :: Agents :: Zapier Hook ................ SUCCESS [  0.013 s]
+[INFO] Cumulocity :: Agents :: Zapier Hook :: Server ...... SUCCESS [  8.212 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Server .. FAILURE [  2.726 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Test .... SKIPPED
+[INFO] Cumulocity :: Agents :: SigFox Agent ............... SKIPPED
+[INFO] Cumulocity :: Agents :: SigFox Agent :: Server ..... SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT ....................... SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT :: Server ............. SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT :: Simulator .......... SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT :: Test ............... SKIPPED
+[INFO] Cumulocity :: Agents :: StatusPage.io Agent ........ SKIPPED
+[INFO] Cumulocity :: Agents :: StatusPage.io Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access ........ SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Echo Microservice (for functional testing) SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Test  SKIPPED
+[INFO] Cumulocity :: Agents :: SmartRule/Apama ............ SKIPPED
+[INFO] Cumulocity :: Agents :: SmartRule :: Server ........ SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA ..................... SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Platform ......... SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Gateway .......... SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Mock ............. SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Test ............. SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Simulator ........ SKIPPED
+[INFO] Cumulocity :: Agents :: Export Route Agent ......... SKIPPED
+[INFO] Cumulocity :: Agents :: Export Route Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Map Cluster Agent .......... SKIPPED
+[INFO] Cumulocity :: Agents :: Map Cluster Agent :: Server  SKIPPED
+[INFO] Cumulocity :: Agents :: Gps Unit Http Tracker Agent  SKIPPED
+[INFO] Cumulocity :: Agents :: Gps Unit Http Tracker Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Weather Agent .............. SKIPPED
+[INFO] Cumulocity :: Agents :: Weather Agent :: Server .... SKIPPED
+[INFO] Cumulocity :: Agents :: Impact ..................... SKIPPED
+[INFO] Cumulocity :: Agents :: Impact :: Server ........... SKIPPED
+[INFO] Cumulocity :: Agents :: Impact :: Test ............. SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity ............... SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider ... SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: API SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: JWireless SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: Comarch SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: Ericsson SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Server ..... SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator .. SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: JWireless SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: Comarch SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: Ericsson SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Test ....... SKIPPED
+[INFO] Cumulocity :: Agents :: Export Billing Agent ....... SKIPPED
+[INFO] Cumulocity :: Agents :: Export Billing Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Inventory Agent ..... SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Inventory Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Order Agent ......... SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Order Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent ................ SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders .... SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: API SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Common services and utilities SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: CBOR Decoder Interval Service SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: CBOR Decoder Alarm Service SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Leshan Cluster SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Leshan Server SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: LWM2M Firmware Update Endpoints SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Server ...... SKIPPED
+[INFO] Cumulocity :: Agents :: SQL Exporter ............... SKIPPED
+[INFO] Cumulocity :: Agents :: SQL Exporter :: Server ..... SKIPPED
+[INFO] Cumulocity :: Agents :: Tenant SLA Monitoring ...... SKIPPED
+[INFO] Cumulocity :: Agents :: Tenant SLA Monitoring :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Echo ....................... SKIPPED
+[INFO] Cumulocity :: Agents :: Route Termination Agent .... SKIPPED
+[INFO] Cumulocity :: Agents :: Route Termination Agent :: Server 9.19.0-SNAPSHOT SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 03:58 min
+[INFO] Finished at: 2018-10-31T11:20:25Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate (3rd-license-generate) on project jwireless-server: Execution 3rd-license-generate of goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate failed: There are missing 3rd party informations! -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate (3rd-license-generate) on project jwireless-server: Execution 3rd-license-generate of goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate failed: There are missing 3rd party informations!
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:954)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:606)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution 3rd-license-generate of goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate failed: There are missing 3rd party informations!
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:148)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:208)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:954)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:606)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
+Caused by: java.lang.RuntimeException: There are missing 3rd party informations!
+    at com.cumulocity.maven3.plugin.thirdlicense.validation.Validator.validate (Validator.java:24)
+    at com.cumulocity.maven3.plugin.thirdlicense.Generate3rdLicenseMojo.execute (Generate3rdLicenseMojo.java:114)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:208)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:954)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:606)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
+[ERROR]
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :jwireless-server
+Build step 'Invoke top-level Maven targets' marked build as failure
+$ ssh-agent -k
+unset SSH_AUTH_SOCK;
+unset SSH_AGENT_PID;
+echo Agent pid 22512 killed;
+[ssh-agent] Stopped.
+Recording test results
+Not sending mail to unregistered user jaroslaw.herod@cumulocity.com
+Not sending mail to unregistered user ozge.akin@cumulocity.com
+Not sending mail to unregistered user jakub.sobolewski@cumulocity.com
+Not sending mail to unregistered user beata@beata-Latitude-E5550
+Not sending mail to unregistered user arkadiusz.borek@cumulocity.com
+Not sending mail to unregistered user kamil.sobala@impaqgroup.com
+Not sending mail to unregistered user shweta.chaubey@cumulocity.com
+Not sending mail to unregistered user root@d4abc893a7a4
+Not sending mail to unregistered user ozge.akin@cumulocity.com
+Not sending mail to unregistered user beata.ilowiecka@cumulocity.com
+Not sending mail to unregistered user jakub.sobolewski@cumulocity.com
+Not sending mail to unregistered user Lukasz.Piasecki@impaqgroup.com
+Sending e-mails to: kamil.sobala@cumulocity.com
+Notifying upstream projects of job completion
+Finished: FAILURE

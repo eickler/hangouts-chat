@@ -1,23 +1,26 @@
 package c8y.jenkins.hangouts;
 
-import static org.junit.Assert.assertEquals;
+import com.google.common.base.Charsets;
 
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.Scanner;
 
 public class FileTools {
-	public static void compareToReference(String actual, String referenceFile) {
-		String reference = getReferenceResult(referenceFile);
-		assertEquals("Reference does not match actual parsing result", reference, actual);
-	}
 
-	
-	@SuppressWarnings("resource")
-	public static String getReferenceResult(String inputFile) {
-		return new Scanner(getStream(inputFile), "UTF-8").useDelimiter("\\A").next();
-	}
+    @SuppressWarnings("resource")
+    public static String load(String inputFile) {
+        return new Scanner(openStream(inputFile), "UTF-8").useDelimiter("\\A").next();
+    }
 
-	public static InputStream getStream(String file) {
-		return FileTools.class.getResourceAsStream(file);
-	}
+    public static InputStream openStream(String file) {
+        return FileTools.class.getResourceAsStream(file);
+    }
+
+    public static Reader openReader(String file) {
+        return new InputStreamReader(FileTools.class.getResourceAsStream(file), Charsets.UTF_8);
+    }
+
+
 }
