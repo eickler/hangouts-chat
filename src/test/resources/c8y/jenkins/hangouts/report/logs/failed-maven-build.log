@@ -1,0 +1,504 @@
+Started by an SCM change
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/jenkins_home/workspace/Cumulocity-Agents-BUILD
+[ssh-agent] Looking for ssh-agent implementation...
+[ssh-agent]   Exec ssh-agent (binary ssh-agent on a remote machine)
+$ ssh-agent
+SSH_AUTH_SOCK=/tmp/ssh-VgVEZdp8z8SR/agent.22509
+SSH_AGENT_PID=22512
+[ssh-agent] Started.
+Running ssh-add (command line suppressed)
+Identity added: /var/jenkins_home/workspace/Cumulocity-Agents-BUILD@tmp/private_key_7017051010852539126.key (/var/jenkins_home/workspace/Cumulocity-Agents-BUILD@tmp/private_key_7017051010852539126.key)
+[ssh-agent] Using credentials jenkins
+[Cumulocity-Agents-BUILD] $ hg --config ******** showconfig paths.default
+[Cumulocity-Agents-BUILD] $ hg --config ******** pull --rev develop
+pulling from ssh://hg@bitbucket.org/m2m/cumulocity-agents/
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 3 changesets with 3 changes to 3 files
+(run 'hg update' to get a working copy)
+[Cumulocity-Agents-BUILD] $ hg --config ******** update --clean --rev develop
+3 files updated, 0 files merged, 0 files removed, 0 files unresolved
+[Cumulocity-Agents-BUILD] $ hg --config ******** log --rev . --template {node}
+[Cumulocity-Agents-BUILD] $ hg --config ******** log --rev . --template {rev}
+[Cumulocity-Agents-BUILD] $ hg --config ******** log --rev 5022c9697dd9b3e973d514963d8c5f996b4d197d --template exists\n
+exists
+[Cumulocity-Agents-BUILD] $ hg --config ******** log --template "<changeset node='{node}' author='{author|xmlescape}' rev='{rev}' date='{date}'><msg>{desc|xmlescape}</msg><added>{file_adds|stringify|xmlescape}</added><deleted>{file_dels|stringify|xmlescape}</deleted><files>{files|stringify|xmlescape}</files><parents>{parents}</parents></changeset>\n" --rev "ancestors('develop') and not ancestors(5022c9697dd9b3e973d514963d8c5f996b4d197d)" --encoding UTF-8 --encodingmode replace
+[Cumulocity-Agents-BUILD] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/default_3.5/bin/mvn -DSKIP_AGENT_PACKAGE_CONTAINER=true -DSKIP_MICROSERVICE_PACKAGE=true -Dskip.agent.package.container=true -Dskip.microservice.package=true -Dnexus.url=http://nexus:8081 clean install -e -Pdefault,ci
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:tekelec-agent-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-shade-plugin is missing. @ c8y.agents:tekelec-agent-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/tekelec-agent/server/pom.xml, line 85, column 12
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:telia-sonera-simulator:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ c8y.agents:telia-sonera-simulator:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/telia-sonera-agent/simulator/pom.xml, line 78, column 21
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ c8y.agents:telia-sonera-simulator:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/telia-sonera-agent/simulator/pom.xml, line 81, column 32
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:telia-sonera-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ c8y.agents:telia-sonera-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/telia-sonera-agent/server/pom.xml, line 137, column 21
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ c8y.agents:telia-sonera-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/telia-sonera-agent/server/pom.xml, line 140, column 32
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:vaisala-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ c8y.agents:vaisala-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/vaisala-agent/server/pom.xml, line 141, column 21
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ c8y.agents:vaisala-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/vaisala-agent/server/pom.xml, line 144, column 32
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:openit-agent-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.nsn.cumulocity.model:device-capability-model:jar -> duplicate declaration of version (?) @ c8y.agents:openit-agent-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/openit-agent/server/pom.xml, line 76, column 15
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:zapierhook-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.powermock:powermock-api-mockito:jar -> duplicate declaration of version (?) @ c8y.agents:zapierhook-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/zapierhook/server/pom.xml, line 88, column 21
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y-agents:opcua-agent-gateway:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.systemPath' for com.prosys.ua:Prosys-OPC-UA-Java-SDK-Client-Server-Evaluation:jar should not point at files within the project directory, ${basedir}/src/main/resources/lib/Prosys-OPC-UA-Java-SDK-Client-Server-Binary-2.2.4-674.jar will be unresolvable by dependent projects @ c8y-agents:opcua-agent-gateway:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/opcua-agent/gateway/pom.xml, line 80, column 25
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.systemPath' for org.opcfoundation.ua:Opc.Ua.Stack:jar should not point at files within the project directory, ${basedir}/src/main/resources/lib/Opc.Ua.Stack-1.02.337.10.jar will be unresolvable by dependent projects @ c8y-agents:opcua-agent-gateway:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/opcua-agent/gateway/pom.xml, line 88, column 25
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y-agents:opcua-agent-simulator:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.systemPath' for com.prosys.ua:Prosys-OPC-UA-Java-SDK-Client-Server-Evaluation:jar should not point at files within the project directory, ${basedir}/src/main/resources/lib/Prosys-OPC-UA-Java-SDK-Client-Server-Binary-2.2.4-674.jar will be unresolvable by dependent projects @ c8y-agents:opcua-agent-simulator:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/opcua-agent/simulator/pom.xml, line 55, column 25
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.systemPath' for org.opcfoundation.ua:Opc.Ua.Stack:jar should not point at files within the project directory, ${basedir}/src/main/resources/lib/Opc.Ua.Stack-1.02.337.10.jar will be unresolvable by dependent projects @ c8y-agents:opcua-agent-simulator:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/opcua-agent/simulator/pom.xml, line 63, column 25
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:map-cluster-agent-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.nsn.cumulocity.clients-java:agent-framework-core:jar -> duplicate declaration of version (?) @ c8y.agents:map-cluster-agent-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/map-cluster-agent/server/pom.xml, line 154, column 21
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:gpsunit-httptracker-agent-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ c8y.agents:gpsunit-httptracker-agent-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/gpsunit-httptracker-agent/server/pom.xml, line 157, column 21
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ c8y.agents:gpsunit-httptracker-agent-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/gpsunit-httptracker-agent/server/pom.xml, line 160, column 32
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:vendme-order-agent-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'build.plugins.plugin.version' for com.nsn.cumulocity.clients-java:agent-framework-package is missing. @ c8y.agents:vendme-order-agent-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/vendme-order-agent/server/pom.xml, line 187, column 12
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective model for c8y.agents:sql-exporter-agent-server:jar:9.19.0-SNAPSHOT
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.nsn.cumulocity.clients-java:java-client:jar -> duplicate declaration of version (?) @ c8y.agents:sql-exporter-agent-server:[unknown-version], /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/sql-exporter-agent/sql-exporter-agent-server/pom.xml, line 76, column 21
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING]
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] Cumulocity :: Agents                                               [pom]
+[INFO] Cumulocity :: Agents :: Billwerk                                   [pom]
+[INFO] Cumulocity :: Agents :: Billwerk :: Insightly                      [jar]
+[INFO] Cumulocity :: Agents :: Billwerk :: Marketo                        [jar]
+[INFO] Cumulocity :: Agents :: Billwerk :: Server                         [jar]
+[INFO] Cumulocity :: Agents :: Simulator                                  [pom]
+[INFO] Cumulocity :: Agents :: Simulator :: Mock                          [jar]
+[INFO] Cumulocity :: Agents :: Billwerk :: Test                           [jar]
+[INFO] Cumulocity :: Agents :: Simulator :: Core                          [jar]
+[INFO] Cumulocity :: Agents :: Simulator :: Platform                      [jar]
+[INFO] Cumulocity :: Agents :: Simulator :: Server                        [jar]
+[INFO] Cumulocity :: Agents :: Simulator :: Test                          [jar]
+[INFO] Cumulocity :: Agents :: LPWAN Backend                              [jar]
+[INFO] Cumulocity :: Agents :: Actility Agent                             [pom]
+[INFO] Cumulocity :: Agents :: Actility Agent :: Server                   [jar]
+[INFO] Cumulocity :: Agents :: SSL Management Agent                       [pom]
+[INFO] Cumulocity :: Agents :: SSL Management Agent :: Server             [jar]
+[INFO] Cumulocity :: Agents :: Tekelec Agent                              [pom]
+[INFO] Cumulocity :: Agents :: Tekelec Agent                              [jar]
+[INFO] Cumulocity :: Agents :: SMS Gateway                                [pom]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Model                       [jar]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Server                      [war]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Client                      [jar]
+[INFO] Cumulocity :: Agents :: Jasper Wireless                            [pom]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Simulator               [jar]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Test                        [jar]
+[INFO] Cumulocity :: Agents :: NetComm Agent                              [pom]
+[INFO] Cumulocity :: Agents :: NetComm Agent :: Server                    [jar]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent                         [pom]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent :: Simulator            [jar]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent :: Server               [jar]
+[INFO] Cumulocity :: Agents :: Vaisala Agent                              [pom]
+[INFO] Cumulocity :: Agents :: Vaisala Agent :: Server                    [jar]
+[INFO] Cumulocity :: Agents :: Speech Agent                               [pom]
+[INFO] Cumulocity :: Agents :: Speech Agent :: Server                     [jar]
+[INFO] Cumulocity :: Agents :: Cellid Agent                               [pom]
+[INFO] Cumulocity :: Agents :: Cellid Agent :: Server                     [war]
+[INFO] Cumulocity :: Agents :: OpenIT Agent                               [pom]
+[INFO] Cumulocity :: Agents :: OpenIT Agent :: Server                     [jar]
+[INFO] Cumulocity :: Agents :: Push Agent                                 [pom]
+[INFO] Cumulocity :: Agents :: Push Forwarding Agent :: Server            [jar]
+[INFO] Cumulocity :: Agents :: User Registration Agent                    [pom]
+[INFO] Cumulocity :: Agents :: User Registration Agent :: Server          [jar]
+[INFO] Cumulocity :: Agents :: Zapier Hook                                [pom]
+[INFO] Cumulocity :: Agents :: Zapier Hook :: Server                      [jar]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Server                  [jar]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Test                    [jar]
+[INFO] Cumulocity :: Agents :: SigFox Agent                               [pom]
+[INFO] Cumulocity :: Agents :: SigFox Agent :: Server                     [jar]
+[INFO] Cumulocity :: Agents :: MQTT                                       [pom]
+[INFO] Cumulocity :: Agents :: MQTT :: Server                             [war]
+[INFO] Cumulocity :: Agents :: MQTT :: Simulator                          [jar]
+[INFO] Cumulocity :: Agents :: MQTT :: Test                               [jar]
+[INFO] Cumulocity :: Agents :: StatusPage.io Agent                        [pom]
+[INFO] Cumulocity :: Agents :: StatusPage.io Agent :: Server              [jar]
+[INFO] Cumulocity :: Agents :: Cloud Remote Access                        [pom]
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Server              [jar]
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Echo Microservice (for functional testing) [jar]
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Test                [jar]
+[INFO] Cumulocity :: Agents :: SmartRule/Apama                            [pom]
+[INFO] Cumulocity :: Agents :: SmartRule :: Server                        [jar]
+[INFO] Cumulocity :: Agents :: OPC UA                                     [pom]
+[INFO] Cumulocity :: Agents :: OPC UA :: Platform                         [jar]
+[INFO] Cumulocity :: Agents :: OPC UA :: Gateway                          [jar]
+[INFO] Cumulocity :: Agents :: OPC UA :: Mock                             [jar]
+[INFO] Cumulocity :: Agents :: OPC UA :: Test                             [jar]
+[INFO] Cumulocity :: Agents :: OPC UA :: Simulator                        [jar]
+[INFO] Cumulocity :: Agents :: Export Route Agent                         [pom]
+[INFO] Cumulocity :: Agents :: Export Route Agent :: Server               [jar]
+[INFO] Cumulocity :: Agents :: Map Cluster Agent                          [pom]
+[INFO] Cumulocity :: Agents :: Map Cluster Agent :: Server                [jar]
+[INFO] Cumulocity :: Agents :: Gps Unit Http Tracker Agent                [pom]
+[INFO] Cumulocity :: Agents :: Gps Unit Http Tracker Agent :: Server      [jar]
+[INFO] Cumulocity :: Agents :: Weather Agent                              [pom]
+[INFO] Cumulocity :: Agents :: Weather Agent :: Server                    [jar]
+[INFO] Cumulocity :: Agents :: Impact                                     [pom]
+[INFO] Cumulocity :: Agents :: Impact :: Server                           [jar]
+[INFO] Cumulocity :: Agents :: Impact :: Test                             [jar]
+[INFO] Cumulocity :: Agents :: Connectivity                               [pom]
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider                   [pom]
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: API            [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl           [pom]
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: JWireless [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: Comarch [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: Ericsson [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Server                     [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator                  [pom]
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: JWireless     [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: Comarch       [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: Ericsson      [jar]
+[INFO] Cumulocity :: Agents :: Connectivity :: Test                       [jar]
+[INFO] Cumulocity :: Agents :: Export Billing Agent                       [pom]
+[INFO] Cumulocity :: Agents :: Export Billing Agent :: Server             [jar]
+[INFO] Cumulocity :: Agents :: Vendme Inventory Agent                     [pom]
+[INFO] Cumulocity :: Agents :: Vendme Inventory Agent :: Server           [jar]
+[INFO] Cumulocity :: Agents :: Vendme Order Agent                         [pom]
+[INFO] Cumulocity :: Agents :: Vendme Order Agent :: Server               [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent                                [pom]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders                    [pom]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: API             [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Common services and utilities [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: CBOR Decoder Interval Service [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: CBOR Decoder Alarm Service [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Leshan Cluster              [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Leshan Server               [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: LWM2M Firmware Update Endpoints [jar]
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Server                      [jar]
+[INFO] Cumulocity :: Agents :: SQL Exporter                               [pom]
+[INFO] Cumulocity :: Agents :: SQL Exporter :: Server                     [jar]
+[INFO] Cumulocity :: Agents :: Tenant SLA Monitoring                      [pom]
+[INFO] Cumulocity :: Agents :: Tenant SLA Monitoring :: Server            [jar]
+[INFO] Cumulocity :: Agents :: Echo                                       [jar]
+[INFO] Cumulocity :: Agents :: Route Termination Agent                    [pom]
+[INFO] Cumulocity :: Agents :: Route Termination Agent :: Server          [jar]
+[INFO]
+[INFO] -----------------------< c8y.agents:c8y-agents >------------------------
+[INFO] Building Cumulocity :: Agents 9.19.0-SNAPSHOT                    [1/114]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ c8y-agents ---
+[INFO] Deleting /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/target
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.8.1:prepare-agent (default-prepare-agent) @ c8y-agents ---
+[INFO] argLine set to -javaagent:/var/jenkins_home/m2/repository/org/jacoco/org.jacoco.agent/0.8.1/org.jacoco.agent-0.8.1-runtime.jar=destfile=/var/jenkins_home/workspace/Cumulocity-Agents-BUILD/../../target/jacoco.exec,append=true
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.8.1:report (default-report) @ c8y-agents ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ c8y-agents ---
+[INFO] Installing /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/pom.xml to /var/jenkins_home/m2/repository/c8y/agents/c8y-agents/9.19.0-SNAPSHOT/c8y-agents-9.19.0-SNAPSHOT.pom
+[INFO]
+[INFO] ---------------------< c8y.agents:billwerk-agent >----------------------
+[INFO] Building Cumulocity :: Agents :: Billwerk 9.19.0-SNAPSHOT        [2/114]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ billwerk-agent ---
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.8.1:prepare-agent (default-prepare-agent) @ billwerk-agent ---
+[INFO] argLine set to -javaagent:/var/jenkins_home/m2/repository/org/jacoco/org.jacoco.agent/0.8.1/org.jacoco.agent-0.8.1-runtime.jar=destfile=/var/jenkins_home/workspace/Cumulocity-Agents-BUILD/billwerk-agent/../../target/jacoco.exec,append=true
+[INFO]
+[INFO] com/jasperwireless/api/ws/schema/UpdateSecureSimCredentialsResponse.java
+[INFO] com/jasperwireless/api/ws/schema/UpdateSubscriberPolicyRequest.java
+[INFO] com/jasperwireless/api/ws/schema/UpdateSubscriberPolicyResponse.java
+[INFO] com/jasperwireless/api/ws/schema/UserContactType.java
+[INFO] com/jasperwireless/api/ws/schema/UserIdentifierType.java
+[INFO] com/jasperwireless/api/ws/schema/VIVOMsisdnCallbackRequest.java
+[INFO] com/jasperwireless/api/ws/schema/VIVOMsisdnCallbackResponse.java
+[INFO] com/jasperwireless/api/ws/schema/VoiceFeatureType.java
+[INFO] com/jasperwireless/api/ws/schema/VoiceMailFeatureType.java
+[INFO] com/jasperwireless/api/ws/schema/VoiceQuotaUnitType.java
+[INFO] com/jasperwireless/api/ws/schema/VoiceServiceType.java
+[INFO] com/jasperwireless/api/ws/schema/VoiceUsageDetailType.java
+[INFO] com/jasperwireless/api/ws/schema/WorkflowAsyncActionResponseCallbackRequest.java
+[INFO] com/jasperwireless/api/ws/schema/WorkflowAsyncActionResponseCallbackResponse.java
+[INFO] com/jasperwireless/api/ws/schema/package-info.java
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jwireless-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jwireless-server ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 495 source files to /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/target/classes
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/src/main/java/com/cumulocity/jwireless/server/common/WebServiceUtils.java: Some input files use or override a deprecated API.
+[8mha:////4PqhW3rL4E0ObohgyToRjAZnMIIPzhRonE5DvM2ESxOXAAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/src/main/java/com/cumulocity/jwireless/server/common/WebServiceUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jwireless-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/src/test/resources
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jwireless-server ---
+[INFO] No sources to compile
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ jwireless-server ---
+[INFO] No tests to run.
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.8.1:report (default-report) @ jwireless-server ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ jwireless-server ---
+[INFO] Building jar: /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/target/jwireless-server-9.19.0-SNAPSHOT.jar
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-war-plugin:3.0.0:exploded (default) @ jwireless-server ---
+[INFO] Exploding webapp
+[INFO] Assembling webapp [jwireless-server] in [/var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/target/jwireless-server-9.19.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [135 msecs]
+[INFO]
+[8mha:////4CQnrq1tb5TLXUhoYMPyOHGo7d7h9VZPMj2VRy9t68PCAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- 3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate (3rd-license-generate) @ jwireless-server ---
+[INFO] Plaugin setup: LicensePluginContextImpl(appBasedir=/var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/target/jwireless-server-9.19.0-SNAPSHOT, licenseFilePath=/var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/src/main/configuration, licenseFileName=THIRD-PARTY-LICENSES, licenseFileTargetType=rpm, mapperProperties=/var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/src/main/resources/license/mapper.properties, project=MavenProject: c8y-agents:jwireless-server:9.19.0-SNAPSHOT @ /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/pom.xml, session=org.apache.maven.execution.MavenSession@4c4e6453, log=org.apache.maven.monitor.logging.DefaultLog@6130d9f5, properties={mail.smtp.starttls.enable=true, mail.smtp.port=25, mail.password=, enabled=true, mail.to=dominik.bielicki@cumulocity.com, mail.smtp.auth=false, mail.smtp.host=127.0.0.1, mail.username=})
+[INFO] Generate 3rd part libraries
+[INFO] Reading libraries from /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/target/jwireless-server-9.19.0-SNAPSHOT
+[INFO] Use default mapping properties from the plugin source: /META-INF/mapper.properties
+[INFO] Save 3rd-party-file /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/src/main/configuration/THIRD-PARTY-LICENSES
+[INFO] Write 3rd party license file to /var/jenkins_home/workspace/Cumulocity-Agents-BUILD/jwireless-agent/server/src/main/configuration/THIRD-PARTY-LICENSES
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] There are missing 3rd party informations:
+artifact: tomcat-annotations-api-8.5.34.jar, property: copyright
+artifact: tomcat-annotations-api-8.5.34.jar, property: license
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Please add missing entries to the mapper.properties file in the source of 3rd-license-maven-plugin or  - as a temporary workaround - to the file in the current project (src/main/resources/license/mapper.properties).
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] Cumulocity :: Agents 9.19.0-SNAPSHOT ............... SUCCESS [  0.344 s]
+[INFO] Cumulocity :: Agents :: Billwerk ................... SUCCESS [  0.009 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Insightly ...... SUCCESS [  0.851 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Marketo ........ SUCCESS [  0.401 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Server ......... SUCCESS [  9.227 s]
+[INFO] Cumulocity :: Agents :: Simulator .................. SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Mock .......... SUCCESS [  0.603 s]
+[INFO] Cumulocity :: Agents :: Billwerk :: Test ........... SUCCESS [ 18.013 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Core .......... SUCCESS [  0.999 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Platform ...... SUCCESS [  2.928 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Server ........ SUCCESS [  5.854 s]
+[INFO] Cumulocity :: Agents :: Simulator :: Test .......... SUCCESS [01:19 min]
+[INFO] Cumulocity :: Agents :: LPWAN Backend .............. SUCCESS [  3.062 s]
+[INFO] Cumulocity :: Agents :: Actility Agent ............. SUCCESS [  0.007 s]
+[INFO] Cumulocity :: Agents :: Actility Agent :: Server ... SUCCESS [ 12.601 s]
+[INFO] Cumulocity :: Agents :: SSL Management Agent ....... SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: SSL Management Agent :: Server SUCCESS [  4.633 s]
+[INFO] Cumulocity :: Agents :: Tekelec Agent .............. SUCCESS [  0.006 s]
+[INFO] Cumulocity :: Agents :: Tekelec Agent .............. SUCCESS [  4.150 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway ................ SUCCESS [  0.006 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Model ....... SUCCESS [  2.340 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Server ...... SUCCESS [  9.903 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Client ...... SUCCESS [  1.510 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless ............ SUCCESS [  0.010 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Simulator SUCCESS [  9.638 s]
+[INFO] Cumulocity :: Agents :: SMS Gateway :: Test ........ SUCCESS [ 14.962 s]
+[INFO] Cumulocity :: Agents :: NetComm Agent .............. SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: NetComm Agent :: Server .... SUCCESS [  4.044 s]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent ......... SUCCESS [  0.021 s]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent :: Simulator SUCCESS [  1.473 s]
+[INFO] Cumulocity :: Agents :: Telia Sonera Agent :: Server SUCCESS [  4.092 s]
+[INFO] Cumulocity :: Agents :: Vaisala Agent .............. SUCCESS [  0.007 s]
+[INFO] Cumulocity :: Agents :: Vaisala Agent :: Server .... SUCCESS [  3.882 s]
+[INFO] Cumulocity :: Agents :: Speech Agent ............... SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: Speech Agent :: Server ..... SUCCESS [ 12.933 s]
+[INFO] Cumulocity :: Agents :: Cellid Agent ............... SUCCESS [  0.135 s]
+[INFO] Cumulocity :: Agents :: Cellid Agent :: Server ..... SUCCESS [  6.931 s]
+[INFO] Cumulocity :: Agents :: OpenIT Agent ............... SUCCESS [  0.041 s]
+[INFO] Cumulocity :: Agents :: OpenIT Agent :: Server ..... SUCCESS [  3.445 s]
+[INFO] Cumulocity :: Agents :: Push Agent ................. SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: Push Forwarding Agent :: Server SUCCESS [  3.865 s]
+[INFO] Cumulocity :: Agents :: User Registration Agent .... SUCCESS [  0.008 s]
+[INFO] Cumulocity :: Agents :: User Registration Agent :: Server SUCCESS [  4.478 s]
+[INFO] Cumulocity :: Agents :: Zapier Hook ................ SUCCESS [  0.013 s]
+[INFO] Cumulocity :: Agents :: Zapier Hook :: Server ...... SUCCESS [  8.212 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Server .. FAILURE [  2.726 s]
+[INFO] Cumulocity :: Agents :: Jasper Wireless :: Test .... SKIPPED
+[INFO] Cumulocity :: Agents :: SigFox Agent ............... SKIPPED
+[INFO] Cumulocity :: Agents :: SigFox Agent :: Server ..... SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT ....................... SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT :: Server ............. SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT :: Simulator .......... SKIPPED
+[INFO] Cumulocity :: Agents :: MQTT :: Test ............... SKIPPED
+[INFO] Cumulocity :: Agents :: StatusPage.io Agent ........ SKIPPED
+[INFO] Cumulocity :: Agents :: StatusPage.io Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access ........ SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Echo Microservice (for functional testing) SKIPPED
+[INFO] Cumulocity :: Agents :: Cloud Remote Access :: Test  SKIPPED
+[INFO] Cumulocity :: Agents :: SmartRule/Apama ............ SKIPPED
+[INFO] Cumulocity :: Agents :: SmartRule :: Server ........ SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA ..................... SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Platform ......... SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Gateway .......... SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Mock ............. SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Test ............. SKIPPED
+[INFO] Cumulocity :: Agents :: OPC UA :: Simulator ........ SKIPPED
+[INFO] Cumulocity :: Agents :: Export Route Agent ......... SKIPPED
+[INFO] Cumulocity :: Agents :: Export Route Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Map Cluster Agent .......... SKIPPED
+[INFO] Cumulocity :: Agents :: Map Cluster Agent :: Server  SKIPPED
+[INFO] Cumulocity :: Agents :: Gps Unit Http Tracker Agent  SKIPPED
+[INFO] Cumulocity :: Agents :: Gps Unit Http Tracker Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Weather Agent .............. SKIPPED
+[INFO] Cumulocity :: Agents :: Weather Agent :: Server .... SKIPPED
+[INFO] Cumulocity :: Agents :: Impact ..................... SKIPPED
+[INFO] Cumulocity :: Agents :: Impact :: Server ........... SKIPPED
+[INFO] Cumulocity :: Agents :: Impact :: Test ............. SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity ............... SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider ... SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: API SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: JWireless SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: Comarch SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Provider :: Impl :: Ericsson SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Server ..... SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator .. SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: JWireless SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: Comarch SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Simulator :: Ericsson SKIPPED
+[INFO] Cumulocity :: Agents :: Connectivity :: Test ....... SKIPPED
+[INFO] Cumulocity :: Agents :: Export Billing Agent ....... SKIPPED
+[INFO] Cumulocity :: Agents :: Export Billing Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Inventory Agent ..... SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Inventory Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Order Agent ......... SKIPPED
+[INFO] Cumulocity :: Agents :: Vendme Order Agent :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent ................ SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders .... SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: API SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Common services and utilities SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: CBOR Decoder Interval Service SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Decoders :: CBOR Decoder Alarm Service SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Leshan Cluster SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Leshan Server SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: LWM2M Firmware Update Endpoints SKIPPED
+[INFO] Cumulocity :: Agents :: LWM2M Agent :: Server ...... SKIPPED
+[INFO] Cumulocity :: Agents :: SQL Exporter ............... SKIPPED
+[INFO] Cumulocity :: Agents :: SQL Exporter :: Server ..... SKIPPED
+[INFO] Cumulocity :: Agents :: Tenant SLA Monitoring ...... SKIPPED
+[INFO] Cumulocity :: Agents :: Tenant SLA Monitoring :: Server SKIPPED
+[INFO] Cumulocity :: Agents :: Echo ....................... SKIPPED
+[INFO] Cumulocity :: Agents :: Route Termination Agent .... SKIPPED
+[INFO] Cumulocity :: Agents :: Route Termination Agent :: Server 9.19.0-SNAPSHOT SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 03:58 min
+[INFO] Finished at: 2018-10-31T11:20:25Z
+[INFO] ------------------------------------------------------------------------
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to execute goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate (3rd-license-generate) on project jwireless-server: Execution 3rd-license-generate of goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate failed: There are missing 3rd party informations! -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate (3rd-license-generate) on project jwireless-server: Execution 3rd-license-generate of goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate failed: There are missing 3rd party informations!
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:954)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:606)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution 3rd-license-generate of goal com.nsn.cumulocity.dependencies:3rd-license-maven-plugin:9.19.0-SNAPSHOT:3rd-license-generate failed: There are missing 3rd party informations!
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:148)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:208)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:954)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:606)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
+Caused by: java.lang.RuntimeException: There are missing 3rd party informations!
+    at com.cumulocity.maven3.plugin.thirdlicense.validation.Validator.validate (Validator.java:24)
+    at com.cumulocity.maven3.plugin.thirdlicense.Generate3rdLicenseMojo.execute (Generate3rdLicenseMojo.java:114)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:208)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:154)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:146)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:954)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:606)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:289)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:229)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:415)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:356)
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] After correcting the problems, you can resume the build with the command
+[8mha:////4Lu9uwqWDP3dHmunFUmKfhj3PPDlfpwH6tHDzWiPoGEeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]   mvn <goals> -rf :jwireless-server
+Build step 'Invoke top-level Maven targets' marked build as failure
+$ ssh-agent -k
+unset SSH_AUTH_SOCK;
+unset SSH_AGENT_PID;
+echo Agent pid 22512 killed;
+[ssh-agent] Stopped.
+Recording test results
+Not sending mail to unregistered user jaroslaw.herod@cumulocity.com
+Not sending mail to unregistered user ozge.akin@cumulocity.com
+Not sending mail to unregistered user jakub.sobolewski@cumulocity.com
+Not sending mail to unregistered user beata@beata-Latitude-E5550
+Not sending mail to unregistered user arkadiusz.borek@cumulocity.com
+Not sending mail to unregistered user kamil.sobala@impaqgroup.com
+Not sending mail to unregistered user shweta.chaubey@cumulocity.com
+Not sending mail to unregistered user root@d4abc893a7a4
+Not sending mail to unregistered user ozge.akin@cumulocity.com
+Not sending mail to unregistered user beata.ilowiecka@cumulocity.com
+Not sending mail to unregistered user jakub.sobolewski@cumulocity.com
+Not sending mail to unregistered user Lukasz.Piasecki@impaqgroup.com
+Sending e-mails to: kamil.sobala@cumulocity.com
+Notifying upstream projects of job completion
+Finished: FAILURE
